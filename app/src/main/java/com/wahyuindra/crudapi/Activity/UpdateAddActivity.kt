@@ -27,7 +27,9 @@ class UpdateAddActivity : AppCompatActivity(), crudView {
                 presenter.addData(
                     etName.text.toString(),
                     etPhone.text.toString(),
-                    etAlamat.text.toString())
+                    etAlamat.text.toString(),
+                    etKelamin.text.toString(),
+                    etHobi.text.toString())
             }
         }else if (itemDataItem != null){
             btnAction.text = "Update"
@@ -35,12 +37,16 @@ class UpdateAddActivity : AppCompatActivity(), crudView {
             etName.setText(item?.staffName.toString())
             etPhone.setText(item?.staffHp.toString())
             etAlamat.setText(item?.staffAlamat.toString())
+            etKelamin.setText(item?.jeniskelamin.toString())
+            etHobi.setText(item?.hobi.toString())
             btnAction.setOnClickListener() {
                 presenter.updateData(
                     item?.staffId ?: "",
                     etName.text.toString(),
                     etPhone.text.toString(),
-                    etAlamat.text.toString())
+                    etAlamat.text.toString(),
+                    etKelamin.text.toString(),
+                    etHobi.text.toString())
                 finish()
             }
         }

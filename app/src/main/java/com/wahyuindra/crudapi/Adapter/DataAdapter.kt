@@ -33,6 +33,8 @@ class DataAdapter(val data: List<DataItem>?, private val click: onClickItem) :
             itemView.tvName.text = get?.staffName
             itemView.tvPhone.text = get?.staffHp
             itemView.tvAddress.text = get?.staffAlamat
+            itemView.tvKelamin.text = get?.jeniskelamin
+            itemView.tvHobi.text = get?.hobi
         }
     }
 
